@@ -1,0 +1,46 @@
+/* Main stylesheet for the HTML CV (Lab 3, Part 1). */
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172033;
+  background: #f2f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #172033;
+  --muted: #66748a;
+  --accent: #087e8b;
+  --line: #dce4ed;
+  --surface: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #04545d; text-decoration: underline; }
+a:focus-visible { outline: 3px solid #f0a202; outline-offset: 3px; border-radius: 3px; }
+.site-header { padding: 52px 24px 44px; text-align: center; color: white; background: linear-gradient(130deg, #10243a, #087e8b); }
+.eyebrow { margin: 0 0 8px; font-size: .76rem; font-weight: 700; letter-spacing: .2em; opacity: .8; }
+h1 { margin: 0; font-size: clamp(2.1rem, 5vw, 3.5rem); line-height: 1.15; letter-spacing: -.04em; }
+.site-header h2 { margin: 12px 0 0; font-size: 1.1rem; font-weight: 400; color: #d9f1f1; }
+.resume-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(260px, .85fr); gap: 24px; max-width: 1080px; margin: 36px auto; padding: 0 24px; }
+.primary-column, .secondary-column { display: grid; align-content: start; gap: 24px; }
+.card { padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: 0 8px 24px rgb(23 32 51 / 5%); }
+h3 { margin: 0 0 18px; padding-bottom: 10px; border-bottom: 2px solid #e7f1f2; color: var(--ink); font-size: 1.18rem; }
+h4 { margin: 0 0 6px; font-size: 1.04rem; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.skill-list li { padding: 5px 11px; border: 1px solid #cce5e6; border-radius: 999px; background: #f0f9f9; color: #155c63; font-size: .88rem; }
+.project + .project { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
+.project p, .card > p { margin: 0 0 10px; }
+.technology { color: var(--muted); font-size: .88rem; }
+.detail-list { margin: 0; padding-left: 20px; }
+.detail-list li { margin: 0 0 9px; }
+.site-footer { display: flex; justify-content: center; align-items: center; gap: 28px; padding: 22px 24px; border-top: 1px solid var(--line); background: #fff; }
+.site-footer p { margin: 0; }
+/* Attribute selector and pseudo-class examples required by the assignment. */
+a[href^="tel:"] { font-variant-numeric: tabular-nums; }
+@media (max-width: 700px) {
+  .resume-layout { grid-template-columns: 1fr; gap: 16px; margin: 20px auto; padding: 0 14px; }
+  .primary-column, .secondary-column { gap: 16px; }
+  .card { padding: 20px; }
+  .site-header { padding: 40px 18px 34px; }
+  .site-footer { flex-direction: column; gap: 8px; }
+}

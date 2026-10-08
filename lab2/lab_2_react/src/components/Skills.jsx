@@ -1,30 +1,12 @@
+const skills = ['Network Security', 'Cybersecurity Fundamentals', 'Linux', 'Windows Security', 'Python', 'C#', 'Git', 'Bash', 'TCP/IP', 'HTTP/HTTPS', 'Authentication & Authorization', 'Access Control', 'Cryptography Fundamentals', 'Password Security', 'Vulnerability Assessment', 'Penetration Testing', 'Security Policies & Procedures', 'Incident Response', 'Security Awareness Training'];
 function Skills() {
   return (
-    <section>
-      <h3>Skills:</h3>
-      <ul>
-        <li>Network Security</li>
-        <li>Cybersecurity Fundamentals</li>
-        <li>Linux</li>
-        <li>Windows Security</li>
-        <li>Python</li>
-        <li>C#</li>
-        <li>Git</li>
-        <li>Bash</li>
-        <li>TCP/IP</li>
-        <li>HTTP/HTTPS</li>
-        <li>Authentication & Authorization</li>
-        <li>Access Control</li>
-        <li>Cryptography Fundamentals</li>
-        <li>Password Security</li>
-        <li>Vulnerability Assessment</li>
-        <li>Penetration Testing</li>
-        <li>Security Policies & Procedures</li>
-        <li>Incident Response</li>
-        <li>Security Awareness Training</li>
+    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 className="mb-4 border-b border-teal-100 pb-3 text-xl font-bold text-slate-900">Skills</h3>
+      <ul className="flex flex-wrap gap-2">
+        {skills.map((skill) => <li key={skill} className="rounded-full border border-teal-100 bg-teal-50 px-3 py-1 text-sm text-teal-900">{skill}</li>)}
       </ul>
     </section>
   );
 }
-
 export default Skills;
