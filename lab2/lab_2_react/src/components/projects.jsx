@@ -5,7 +5,7 @@ const projects = [
 ];
 function Projects() {
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+    <section id="projects" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
       <h3 className="mb-4 border-b border-teal-100 pb-3 text-xl font-bold text-slate-900">Selected Projects</h3>
       <div className="space-y-5">
         {projects.map((project) => (

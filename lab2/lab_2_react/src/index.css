@@ -1,4 +1,20 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root { font-family: Inter, "Segoe UI", Arial, sans-serif; color: #172033; background: #f1f5f9; font-synthesis: none; text-rendering: optimizeLegibility; }
 body { margin: 0; min-width: 320px; }
+html.dark { color-scheme: dark; }
+html:not(.dark) { color-scheme: light; }
+html, body, #root { min-height: 100%; }
+
+/* Keep the resume content readable in both themes; the Skills pills keep their own colors. */
+#root main #projects :is(h3, h4, p),
+#root main #education :is(h3, p),
+#root main #additional-information :is(h3, li),
+#root main #reviews :is(h3, p, h4) { color: #111827 !important; }
+html.dark #root main #projects :is(h3, h4, p),
+html.dark #root main #education :is(h3, p),
+html.dark #root main #additional-information :is(h3, li),
+html.dark #root main #reviews :is(h3, p, h4) { color: #fff !important; }
+#root main #skills h3 { color: #111827; }
+html.dark #root main #skills h3 { color: #fff; }

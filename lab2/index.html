@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rodych Vitalii | Cybersecurity CV</title>
 		<link rel="stylesheet" href="../lab3/styles.css" />
+		<link rel="stylesheet" href="lab4.css" />
 		<style>
 			/* Internal CSS: a small page-specific adjustment. */
 			.site-header .eyebrow { opacity: 0.82; }
@@ -15,6 +16,7 @@
 			<p class="eyebrow">CURRICULUM VITAE</p>
 			<h1 style="text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18)">Rodych Vitalii</h1>
 			<h2>Cybersecurity Specialist</h2>
+			<nav class="cv-nav" aria-label="CV sections"><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#additional-information">Additional Information</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
 		</header>
 		<main class="resume-layout">
 			<div class="primary-column">
@@ -33,9 +35,13 @@
 			</div>
 			<aside class="secondary-column">
 				<section class="card" id="education"><h3>Education</h3><p><strong>Cybersecurity</strong><br />Lviv Polytechnic National University</p><p class="technology">September 2025 – present</p></section>
-				<section class="card"><h3>Additional Information</h3><ul class="detail-list"><li>Available for full-time positions in cybersecurity</li><li>Willing to relocate</li><li>Fluent in English and Ukrainian</li><li>Familiar with cybersecurity principles and information security practices</li><li>Interested in system security, network security, and security automation</li></ul></section>
+				<section class="card" id="additional-information"><h3>Additional Information</h3><ul class="detail-list"><li>Available for full-time positions in cybersecurity</li><li>Willing to relocate</li><li>Fluent in English and Ukrainian</li><li>Familiar with cybersecurity principles and information security practices</li><li>Interested in system security, network security, and security automation</li></ul></section>
 			</aside>
+			<section class="card reviews-card" id="reviews" aria-labelledby="reviews-title"><h3 id="reviews-title">Illustrative professional feedback</h3><p class="sample-note">Sample wording for this CV; these are not verified employer testimonials.</p><p class="reviews-status" id="reviews-status" role="status">Loading comments…</p><div class="review-list" id="review-list"></div></section>
 		</main>
-		<footer class="site-footer"><p><strong>Phone</strong> <a href="tel:+380980748465">+380980748465</a></p><a href="https://github.com/VetaLIch123" target="_blank" rel="noreferrer">GitHub profile ↗</a></footer>
+		<footer class="site-footer" id="contact"><p><strong>Phone</strong> <a href="tel:+380980748465">+380980748465</a></p><a href="https://github.com/VetaLIch123" target="_blank" rel="noreferrer">GitHub profile ↗</a><div class="system-info" id="system-info" aria-label="Browser and platform information"></div><button class="theme-toggle" id="theme-toggle" type="button">Switch to night mode</button></footer>
+		<button class="contact-trigger" id="contact-trigger" type="button">Send a message</button>
+		<div class="modal-backdrop" id="contact-modal" hidden><section class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title"><button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button><h2 id="contact-title">Contact me</h2><p>Leave your contact details and message.</p><form action="https://formspree.io/f/xeaangdn" method="POST"><label>Name<input name="name" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" /></label><label>Message<textarea name="message" rows="4" required></textarea></label><button class="submit-button" type="submit">Send</button></form><p class="form-status" id="form-status" role="status" aria-live="polite"></p></section></div>
+		<script src="lab4.js" defer></script>
 	</body>
 </html>
